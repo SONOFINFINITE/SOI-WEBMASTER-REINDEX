@@ -1,11 +1,18 @@
 {
-  "printWidth": 100,
+  "printWidth": 150, 
+  "tabWidth": 4, 
+  "useTabs": false, 
   "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true, 
+  "jsxBracketSameLine": false,
+  "semi": true, 
   "overrides": [
     {
       "files": ["*.js", "*.cjs", "*.mjs", "*.ts", "*.tsx", "*.cts", "*.mts"],
       "options": {
         "tabWidth": 4
+        
       }
     }
   ]

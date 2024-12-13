@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import svgr from 'vite-plugin-svgr';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [
-        react(),
-        svgr({
-            include: '**/*.svg?react',
-        }),
-    ],
-});
+  plugins: [react()],
+  server: {
+    port: 3000,
+    open: true
+  },
+  base: './',
+  assetsInclude: ['**/*.mov'],
+})
