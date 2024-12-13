@@ -35,14 +35,20 @@ export const Home = ({ className }: HomeProps) => {
             alert('Пожалуйста, введите API ключ');
             return;
         }
+
+        const urlList = urls
+            .split('\n')
+            .map(url => url.trim())
+            .filter(url => url);
+
+        if (urlList.length === 0) {
+            alert('Пожалуйста, введите хотя бы одну ссылку для переиндексации');
+            return;
+        }
+
         setIsLoading(true);
 
         try {
-            const urlList = urls
-                .split('\n')
-                .map(url => url.trim())
-                .filter(url => url);
-
             const result = await yandexWebmaster.recrawlUrls(urlList);
 
             setResults({
