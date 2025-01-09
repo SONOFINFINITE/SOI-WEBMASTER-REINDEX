@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const BASE_URL = process.env.NODE_ENV === 'production' 
-    ? '/.netlify/functions/api'
-    : 'http://localhost:3030/api';
+    ? 'https://soi-webmaster-reindex.onrender.com/v4'
+    : 'http://localhost:3000/api';
 
 interface YandexUser {
     user_id: number;
