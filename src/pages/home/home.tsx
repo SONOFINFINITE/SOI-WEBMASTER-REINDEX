@@ -94,7 +94,6 @@ export const Home = ({ className }: HomeProps) => {
                         className={styles['reindex__url-input']} 
                     />
                     </label>
-                   
                     <div className={styles.div1}>
                         <button 
                             type="submit"
